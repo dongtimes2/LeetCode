@@ -8,6 +8,4 @@ function twoSum(nums: number[], target: number): number[] {
       cache[target - nums[i]] = i;
     }
   }
-  
-  console.log(cache)
 };
