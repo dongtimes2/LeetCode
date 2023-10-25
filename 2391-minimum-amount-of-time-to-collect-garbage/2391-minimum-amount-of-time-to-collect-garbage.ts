@@ -46,12 +46,7 @@ function garbageCollection(garbage: string[], travel: number[]): number {
     if (glassLimit && i < glassLimit) {
       glass += travel[i] ?? 0;
     }
-      
-    console.log(i,"회차", metal, paper, glass);
-    
   }
-  
-  console.log(metal, paper, glass);
       
   return metal + paper + glass;
 };
