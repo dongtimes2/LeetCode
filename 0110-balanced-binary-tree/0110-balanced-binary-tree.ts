@@ -17,11 +17,11 @@ function isBalanced(root: TreeNode | null): boolean {
   
   let result = true;
   
-  const find = (node, level) => {
+  const find = (node) => {
     if (!node) return 0;
     
-    const left = find(node.left, level + 1);
-    const right = find(node.right, level + 1);
+    const left = find(node.left);
+    const right = find(node.right);
     
    
     if (Math.abs(right - left) > 1) {
@@ -31,7 +31,7 @@ function isBalanced(root: TreeNode | null): boolean {
     return Math.max(left, right) + 1;
   }
   
-  find(root, 0);
+  find(root);
   
   return result;
 };
